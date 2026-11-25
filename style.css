@@ -1,0 +1,173 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #101010;
+  color: white;
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+}
+
+.app {
+  max-width: 450px;
+  margin: auto;
+  padding: 25px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0 45px;
+}
+
+header h2 {
+  color: #ff3030;
+  letter-spacing: 3px;
+}
+
+header span {
+  color: #36d47a;
+  font-size: 12px;
+}
+
+#authSection {
+  background: #1c1c1c;
+  padding: 25px 20px;
+  border-radius: 18px;
+  margin-top: 25px;
+}
+
+h1 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  color: #aaa;
+  margin-bottom: 30px;
+}
+
+input {
+  display: block;
+  width: 100%;
+  padding: 16px;
+  margin: 15px 0;
+  border: 1px solid #444;
+  border-radius: 10px;
+  background: #292929;
+  color: white;
+  font-size: 15px;
+  outline: none;
+}
+
+input:focus {
+  border-color: #ff3030;
+}
+
+button {
+  width: 100%;
+  padding: 16px;
+  margin-top: 15px;
+  border: none;
+  border-radius: 10px;
+  background: #ff3030;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.6;
+}
+
+.switch {
+  text-align: center;
+  margin-top: 25px;
+  color: #aaa;
+  font-size: 14px;
+}
+
+a {
+  color: #ff4545;
+  text-decoration: none;
+  margin-left: 5px;
+}
+
+#message {
+  margin-top: 15px;
+  font-size: 14px;
+  overflow-wrap: anywhere;
+}
+
+#homeSection {
+  background: #1c1c1c;
+  padding: 25px;
+  border-radius: 18px;
+  margin-top: 25px;
+}
+
+#homeSection p {
+  margin-top: 15px;
+  color: #ccc;
+}
+
+#homeSection h3 {
+  margin-top: 35px;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+#chatMessages {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.my-message {
+    align-self: flex-end;
+    background: #075e45;
+    color: white;
+    padding: 12px;
+    border-radius: 12px 12px 0 12px;
+    max-width: 75%;
+}
+
+.other-message {
+    align-self: flex-start;
+    background: #333333;
+    color: white;
+    padding: 12px;
+    border-radius: 12px 12px 12px 0;
+    max-width: 75%;
+}
+.my-message > div {
+    background: #dcf8c6;
+    color: #000;
+    padding: 10px 14px;
+    border-radius: 12px 12px 0 12px;
+    max-width: 75%;
+}
+
+.other-message > div {
+    background: #ffffff;
+    color: #000;
+    padding: 10px 14px;
+    border-radius: 12px 12px 12px 0;
+    max-width: 75%;
+}
+.message-status {
+    font-size: 12px;
+    margin-left: 5px;
+    color: #999999;
+}
+
+.message-status.read {
+    color: #34B7F1;
+}
