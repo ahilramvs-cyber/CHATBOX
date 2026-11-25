@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>CHATBOX</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="app">
+
+    <!-- HEADER -->
+    <header>
+      <h2>CHATBOX</h2>
+      <span>● ONLINE</span>
+    </header>
+
+    <!-- LOGIN / REGISTER SECTION -->
+    <section id="authSection">
+
+      <h1 id="formTitle">Login</h1>
+
+      <p class="subtitle">
+        Welcome to CHATBOX
+      </p>
+
+      <form id="authForm">
+
+        <input
+          type="text"
+          id="name"
+          placeholder="Your name"
+          style="display: none;"
+        >
+
+        <input
+          type="email"
+          id="email"
+          placeholder="Email address"
+          required
+        >
+
+        <input
+          type="password"
+          id="password"
+          placeholder="Password"
+          required
+        >
+
+        <button type="submit" id="submitBtn">
+          Login
+        </button>
+
+      </form>
+
+      <p id="message"></p>
+
+      <p class="switch">
+
+        <span id="switchText">
+          Don't have an account?
+        </span>
+
+        <a href="#" id="switchBtn">
+          Register
+        </a>
+
+      </p>
+
+    </section>
+
+    <!-- HOME SECTION -->
+    <section id="homeSection" style="display: none;">
+
+      <h2>Welcome to CHATBOX!</h2>
+<p id="userName"></p>
+<p id="userEmail"></p>
+      
+<!-- EDIT PROFILE -->
+<div id="profileSection">
+
+  <h3>My Profile</h3>
+<img
+  id="myProfilePhoto"
+  src="https://via.placeholder.com/120"
+  alt="Profile Photo"
+  width="120"
+  height="120"
+  style="border-radius:50%; object-fit:cover; display:block; margin-bottom:15px;"
+>
+
+<input
+  type="file"
+  id="profilePhotoInput"
+  accept="image/*"
+>
+  <input
+    type="text"
+    id="editName"
+    placeholder="Enter your new name"
+  >
+
+  <button id="saveProfileBtn" type="button">
+    Save Profile
+  </button>
+
+  <p id="profileMessage"></p>
+
+</div>
+
+
+      <button id="logoutBtn" type="button">
+        Logout
+      </button>
+
+      <!-- USERS SECTION -->
+      <div id="usersSection">
+
+        <h2>CHATBOX Users</h2>
+
+        <input
+          type="text"
+          id="searchUsers"
+          placeholder="Search users..."
+        >
+
+        <div id="usersList">
+          Loading users...
+        </div>
+
+      </div>
+
+      <!-- PRIVATE CHAT SECTION -->
+      <div id="chatSection" style="display: none;">
+
+        <button
+          id="backToUsersBtn"
+          type="button"
+        >
+          ← Back to Users
+        </button>
+
+        <h2 id="chatWithName">
+          Chat
+        </h2>
+
+        <div id="chatMessages">
+          No messages yet.
+        </div>
+
+        <div class="message-input">
+
+          <input
+            type="text"
+            id="messageInput"
+            placeholder="Type a message..."
+          >
+
+          <button
+            id="sendBtn"
+            type="button"
+          >
+            Send
+          </button>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </div>
+
+  <!-- FIREBASE SDK -->
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-storage-compat.js"></script>
+  <!-- CHATBOX JAVASCRIPT -->
+  <script src="script.js"></script>
+
+</body>
+</html>
